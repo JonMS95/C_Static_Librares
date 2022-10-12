@@ -99,11 +99,13 @@ Note that both functions have the same function prototype.
 Now, we should first compile both of the recently created files, as the librray needs those to be generated:
 
 **gcc -c sumFunction.c -o sumFunction.o**
+
 **gcc -c subtractFunction.c -o subtractFunction.o**
 
 We are now ready to generate the library files. Let's execute the following lines:
 
 **ar rcs libsumFunction.lib sumFunction.o**
+
 **ar rcs libsubtractFunction.lib subtractFunction.o**
 
 It’s worth paying some additional attention to the statement that are part of the command above:
@@ -115,13 +117,14 @@ It’s worth paying some additional attention to the statement that are part of 
 - **libFileName.lib**: well, it’s actually called libsumFunction.lib or libsubtractFunction.lib in this case, but what we are trying to tell here, is that it always has to follow the described pattern[^2].
 - **fileName.o**: it’s sumFunction.o or subtractFunction.o in this case, but same as before, the purpose is to understand the general case: a reference to the source code we are going to generate the library from.
 
-[^2]: It will get specially relevant at linking time.
+[^2]: It will get specially relevant at linking time. On top of that, note that the extension of the file is *.lib* for Windows operating systems files, whereas it's *.a* for Linux OS.
 
 ## Link process and executable files generation
 
 Until this point, we have already generated the *main.o* files as well as the library files we are going to use. Okay, so let's generate the final executable files:
 
 **gcc main.o -L. -lsumFunction -o sumProg**
+
 **gcc main.o -L. -lsubtractFunction -o subtractProg**
 
 Again, some parameters need a detailed explanation for a better understandability:
@@ -131,9 +134,10 @@ Again, some parameters need a detailed explanation for a better understandabilit
 - **-o**: it tells which the output is going to be.
 - **prog**: or sumProg in our case, is the name of the executable file that’s the output of the command.
 
-Once we’ve done all of this, the executable file may be used by using some command line parameters, so (once we are working with the command line) if we type:
+Once we’ve done all of this, the executable file may be used by writting some command line parameters, so (once we are working with the command line) if we type:
 
 **sumProg.exe 6 4**
+
 **subtractProg.exe 6 4**
 
 The output will be the sum or subtraction of the provided numbers (10 for the addition, 2 for the subtraction). As we only allow two numbers to be passed as input parameters apart from the name of the executable, another message will be displayed in that case, telling the user that only two additional parameters can be used with the current program[^3].
