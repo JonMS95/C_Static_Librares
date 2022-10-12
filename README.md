@@ -4,8 +4,10 @@ While working with the C/C++ programming language, it's common for developers to
 These files are pieces of code that have already been compiled and that are ready to be linked to our main code.
 
 There are two kind of libraries in the C/C++ standard: **static** and **dynamic** libraries:
-- **Static libraries** are the type of libraries that are attached to the main executable file at linking process.
-- On the other hand, **dynamic libraries** are attached at runtime, it's to say, they are somehow related to the main executable file after the executable file has already been generated.
+- **Static libraries** are the type of libraries that are attached to the main executable file at linking process. The file is part of the final executable file, so
+the code is faster. As a con, the code is a bit heavier, as the library file is included.
+- On the other hand, **dynamic libraries** are attached at runtime, it's to say, they are somehow related to the main executable file after the executable file has already been generated. As a pro, more than one file could be using these files at the same time, but they will not be part of the final executable file, making it
+slightly slower.
 
 In this short tutorial, we are only going to cover the static kind of libraries. We will leave the dynamic ones for another time.
 
