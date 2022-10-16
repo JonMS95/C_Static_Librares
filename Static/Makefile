@@ -1,3 +1,5 @@
+all: main_obj sum_obj subtract_obj sum_lib subtract_lib sum_exe subtract_exe
+
 main_obj: Source_files/main.c Source_files/functionPrototype.h
 	gcc -c Source_files/main.c -o Object_files/main.o
 
