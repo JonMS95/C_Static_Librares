@@ -28,3 +28,5 @@ sum_exe: Object_files/main.o Static_libraries/libsumFunction.lib
 # Generates subtract executable file.
 subtract_exe: Object_files/main.o Static_libraries/libsubtractFunction.lib
 	gcc Object_files/main.o -LStatic_libraries -lsubtractFunction -o Executable_files/subtractProg
+
+# comment
