@@ -13,11 +13,11 @@ sum_obj: Source_files/sumFunction.c
 subtract_obj: Source_files/subtractFunction.c
 	gcc -c Source_files/subtractFunction.c -o Object_files/subtractFunction.o
 
-# Generates sum function static library.
+# Generates sum function static library for Windows OS.
 sum_lib: Object_files/sumFunction.o
 	ar rcs Static_libraries/libsumFunction.lib Object_files/sumFunction.o
 
-# Generates subtract function static library.
+# Generates subtract function static library for Windows OS.
 subtract_lib: Object_files/subtractFunction.o
 	ar rcs Static_libraries/libsubtractFunction.lib Object_files/subtractFunction.o
 
