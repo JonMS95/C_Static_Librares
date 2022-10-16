@@ -1,5 +1,8 @@
-# Execute all the lines below. It can be executed by default, it's to say, just by typing "make" on the console.
-all: main_obj sum_obj subtract_obj sum_lib subtract_lib sum_exe subtract_exe
+# Execute all the rules needed to get the final Windows executables.
+Win: main_obj sum_obj subtract_obj sum_lib_Win subtract_lib_Win sum_exe_Win subtract_exe_Win
+
+# Execute all the rules needed to get the final Linux executables.
+Lnx: main_obj sum_obj subtract_obj  sum_lib_Lnx subtract_lib_Lnx sum_exe_Lnx subtract_exe_Lnx
 
 # Generates main.o file.
 main_obj: Source_files/main.c Source_files/functionPrototype.h
