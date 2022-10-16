@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include "functionPrototype.h"
 
-#define MIN_ARGC_VALUE          3
+#define CORRECT_ARGC_VALUE      3
 #define ARGUMENT_NUMBER_MESSAGE "Only two arguments should be passed on the command line!\r\n"
 
 int main(int argc, char** argv)
 {
-    if(argc == MIN_ARGC_VALUE)
+    if(argc == CORRECT_ARGC_VALUE)
     {
         int x = atoi(argv[1]);
         int y = atoi(argv[2]);
