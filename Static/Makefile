@@ -5,7 +5,7 @@ src_pro		= Source_files/functionPrototype.h
 
 obj_main	= Object_files/main.o
 obj_sum		= Object_files/sumFunction.o
-obj_sub		= Object_files/sumFunction.o
+obj_sub		= Object_files/subtractFunction.o
 
 win_lib_stc_sum	= Windows_static_libraries/libsumFunction.lib
 win_lib_stc_sub	= Windows_static_libraries/libsubtractFunction.lib
@@ -17,13 +17,13 @@ win_exec_sum	= Windows_executable_files/sumProg
 win_exec_sub	= Windows_executable_files/subProg
 
 lnx_exec_sum	= Linux_executable_files/sumProg
-lnx_exec_sub	= Linux_executable_files/sumProg
+lnx_exec_sub	= Linux_executable_files/subProg
 
 # Execute all the rules needed to get the final Windows executables.
 Win: main_obj sum_obj subtract_obj sum_lib_Win subtract_lib_Win sum_exe_Win subtract_exe_Win
 
 # Execute all the rules needed to get the final Linux executables.
-Lnx: main_obj sum_obj subtract_obj  sum_lib_Lnx subtract_lib_Lnx sum_exe_Lnx subtract_exe_Lnx
+Lnx: main_obj sum_obj subtract_obj sum_lib_Lnx subtract_lib_Lnx sum_exe_Lnx subtract_exe_Lnx
 
 # Generates main.o file.
 main_obj: $(src_main) $(src_pro)
