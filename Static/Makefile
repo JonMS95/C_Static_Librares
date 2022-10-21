@@ -71,3 +71,6 @@ subtract_exe_Lnx: $(obj_main) $(lnx_lib_stc_sub)
 
 clean_Lnx:
 	rm -f Object_files/* Linux_static_libraries/* Linux_executable_files/*
+
+clean_Win:
+	del /s/q Object_files\* Windows_static_libraries\* Windows_executable_files\*
