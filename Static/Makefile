@@ -16,8 +16,8 @@ lnx_lib_stc_sub	= Linux_static_libraries/libsubtractFunction.a
 win_exec_sum	= Windows_executable_files/sumProg
 win_exec_sub	= Windows_executable_files/subProg
 
-lnx_exec_sum	= Windows_executable_files/sumProg
-lnx_exec_sub	= Windows_executable_files/sumProg
+lnx_exec_sum	= Linux_executable_files/sumProg
+lnx_exec_sub	= Linux_executable_files/sumProg
 
 # Execute all the rules needed to get the final Windows executables.
 Win: main_obj sum_obj subtract_obj sum_lib_Win subtract_lib_Win sum_exe_Win subtract_exe_Win
