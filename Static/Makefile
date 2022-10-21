@@ -69,5 +69,5 @@ sum_exe_Lnx: $(obj_main) $(lnx_lib_stc_sum)
 subtract_exe_Lnx: $(obj_main) $(lnx_lib_stc_sub)
 	gcc $(obj_main) -LLinux_static_libraries -lsubtractFunction -o $(lnx_exec_sub)
 
-clean:
-	rm Object_files/*
+clean_Lnx:
+	rm -f Object_files/* Linux_static_libraries/* Linux_executable_files/*
