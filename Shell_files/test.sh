@@ -4,12 +4,12 @@ echo
 echo "*******************************"
 echo "Testing 'mult' executable file."
 echo "*******************************"
-./Executable_files/mult 10 3
+./Executable_files/sumProg 6 4
 
 sleep 1
 
 echo
 echo "*******************************"
-echo "Testing 'div' executable file."
+echo "Testing 'subProg' executable file."
 echo "*******************************"
-./Executable_files/div 10 3
+./Executable_files/subProg 6 4

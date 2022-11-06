@@ -14,21 +14,21 @@ exec_sum	= Executable_files/sumProg
 exec_sub	= Executable_files/subProg
 
 # Execute all the rules needed to get the final Linux executables.
-all: directories clean main_obj sum_obj subtract_obj sum_lib_Lnx subtract_lib_Lnx sum_exe_Lnx subtract_exe_Lnx test
+all: directories clean main.o sum.o subtract.o sum_lib subtract_lib sum subtract rm_obj_lib test
 
 directories:
 	@./Shell_files/directories.sh
 
 # Generates main.o file.
-main_obj: $(src_main) $(src_pro)
+main.o: $(src_main) $(src_pro)
 	gcc -c $(src_main) -o $(obj_main)
 
 # Generates sumFunction.o file.
-sum_obj: $(src_sum)
+sum.o: $(src_sum)
 	gcc -c $(src_sum) -o $(obj_sum)
 
 # Generates subtractFunction.o file.
-subtract_obj: $(src_sub)
+subtract.o: $(src_sub)
 	gcc -c $(src_sub) -o $(obj_sub)
 
 # Generates sum function static library for Linux OS.
@@ -40,15 +40,17 @@ subtract_lib: $(obj_sub)
 	ar rcs $(lib_sub) $(obj_sub)
 
 # Generates sum executable file for Linux OS.
-sum_exe: $(obj_main) $(lib_sum)
+sum: $(obj_main) $(lib_sum)
 	gcc $(obj_main) -LStatic_libraries -lsumFunction -o $(exec_sum)
 
 # Generates subtract executable file for Linux OS.
-subtract_exe: $(obj_main) $(lib_sub)
+subtract: $(obj_main) $(lib_sub)
 	gcc $(obj_main) -LStatic_libraries -lsubtractFunction -o $(exec_sub)
 
-rm_obj:
-	rm -rf Object_files
+# Libraries could be deleted too after making the final executables,
+# as they are already built-in within those executable files.
+rm_obj_lib:
+	rm -rf Object_files Static_libraries
 
 clean:
 	rm -f Static_libraries/* Executable_files/*
