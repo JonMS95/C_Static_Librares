@@ -53,7 +53,7 @@ rm_obj_lib:
 	rm -rf Object_files Static_libraries
 
 clean:
-	rm -f Static_libraries/* Executable_files/*
+	rm -f Executable_files/*
 
 test:
 	@./Shell_files/test.sh
