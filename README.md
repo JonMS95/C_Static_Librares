@@ -114,7 +114,7 @@ It’s worth paying some additional attention to the statement that are part of 
   - **r**: replace. It means it’s going to replace any other files that exist within the current folder with the same name.
   - **c**: create. We are going to create an archive that doesn’t already exist.
   - **s**: index (no idea why it’s represented with the “s” character). It means that an index of symbols is going to be generated in order for other files to easily find them.
-- **libFileName.lib**: well, it’s actually called libsumFunction.lib or libsubtractFunction.lib in this case, but what we are trying to tell here, is that it always has to follow the described pattern[^2].
+- **libFileName.lib**: well, it’s actually called libsumFunction.lib or libsubtractFunction.lib in this case, but what we are trying to tell here, is that it does always have to follow the described pattern[^2].
 - **fileName.o**: it’s sumFunction.o or subtractFunction.o in this case, but same as before, the purpose is to understand the general case: a reference to the source code we are going to generate the library from.
 
 [^2]: It will get specially relevant at linking time. On top of that, note that the extension of the file is *.lib* for Windows operating systems files, whereas it's *.a* for Linux OS.
