@@ -2,7 +2,7 @@
 
 echo
 echo "*******************************"
-echo "Testing 'mult' executable file."
+echo "Testing 'sumProg' executable file."
 echo "*******************************"
 ./Executable_files/sumProg 6 4
 
