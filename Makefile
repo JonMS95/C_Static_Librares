@@ -21,15 +21,15 @@ directories:
 
 # Generates main.o file.
 main.o: $(src_main) $(src_pro)
-	gcc -c $(src_main) -o $(obj_main)
+	gcc -g -c $(src_main) -o $(obj_main)
 
 # Generates sumFunction.o file.
 sum.o: $(src_sum)
-	gcc -c $(src_sum) -o $(obj_sum)
+	gcc -g -c $(src_sum) -o $(obj_sum)
 
 # Generates subtractFunction.o file.
 subtract.o: $(src_sub)
-	gcc -c $(src_sub) -o $(obj_sub)
+	gcc -g -c $(src_sub) -o $(obj_sub)
 
 # Generates sum function static library for Linux OS.
 sum_lib: $(obj_sum)
